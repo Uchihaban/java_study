@@ -54,6 +54,26 @@ public class Demo5 {
              2.是否存在未知的参数（是否存在调用者确定的参数）
        
     
- 
+ return 注意：一个函数的返回值类型是具体的，那么该函数就必须要在任意情况下
+                            都保证有返回值（避免一些不符合条件的值没有返回值），
+                            除了返回值类型是void以外。
+                  作用 ：返回数据给函数调用者；
+                             能结束一个函数（函数一旦执行了return关键字，那么该函数立马结束）。
+ return与break的区别：return是结束一个函数；break是结束一个循环；
+ */
 
-*/
+ class Demo5{
+	public static void main(String[] args){
+	    print();
+}
+	 public static void print(){
+ 
+     for(int i=0; i<5; i++){
+         System.out.println("hello");
+         //break;//跳出循环
+         //return;//跳出函数
+         }
+     
+         System.out.println("哈哈，我能执行吗");        
+         }
+	 } 
