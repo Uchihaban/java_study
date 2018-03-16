@@ -1,5 +1,7 @@
 package day2;
 
+import java.util.Arrays;
+
 /*排序算法：
  * 
  选择排序（直接排序）：使用一个元素，与其他元素挨个比较一次，符合条件交换位置；
@@ -90,5 +92,36 @@ class Demo2{
      4.数组中元素与元素之间的内存地址是连续的
  */
 
+/*题目：目前存在数组：int[] arr = {0,2,3,5,0,6}，编写一个函数接受该数组，
+然后把数组的0清空，然后返回一个不存在0元素的数组；
+步骤：1、计算新数组的长度；
+    2、创建一个新数组；
+    3、非0数组存储到新数组中；
+*/
 
-
+class Demo2{
+	public static void main(String[] args){
+		int[] a={0,2,3,5,0,6};
+		a = clean(a);
+		System.out.println("答案是"+ Arrays.toString(a));
+		
+	}
+	public static int[] clean(int[] arr){//应该先求出新数组的容量
+		int count = 0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==0){
+				count++;
+			}
+		}
+		int[] newArr = new int[arr.length-count];
+		int j=0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]!=0){
+				newArr[j]=arr[i];
+				j++;
+			}
+		}
+		return newArr;
+		
+	}
+}

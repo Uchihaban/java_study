@@ -1,5 +1,5 @@
 package day3;
-
+//	二维数组中的查找
 public class Solution {
 	public static boolean Find(int target, int [][] array) {
         for(int i = 0; i < array.length; i++){
