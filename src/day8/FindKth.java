@@ -1,22 +1,20 @@
 package day8;
 
-import java.util.*;
-
 public class FindKth {
 	public int findKth(int[] a, int n, int K) {
 		return find(a, 0, n-1, K);
-    }
+		}
 
 	//递归寻找数组中第K大的元素
 	private int find(int[] a, int low, int high, int K) {
-		int pivot = partition(a, low, high);
+			int pivot = partition(a, low, high);
 			if(pivot + 1 < K)//中轴位置少于K个，在右子数组中继续查找
 				return find(a, pivot+1, high, K);
 			else if(pivot + 1 > K)//中轴位置大于K个，在左子数组中继续查找
 				return find(a, low, pivot-1, K);
 			else//中轴元素正好是第K大的元素
 				return a[pivot];
-    }
+}
 
 //将数组划分为两部分，左边较大，右边较小
 	private int partition(int[] a, int low, int high) {
@@ -43,8 +41,8 @@ public class FindKth {
 			a[low] = pivotValue;
 
 // 返回数组的中轴位置
-			return low;
-    }
-}
+		}return low;
+
+	}
 	
 }

@@ -22,7 +22,8 @@ public static String Pan(int length, int[] arr){
 public static void main(String[] args){
 	
    
-    Scanner sin=new Scanner(System.in);
+    @SuppressWarnings("resource")
+	Scanner sin=new Scanner(System.in);
    
     while(sin.hasNext()){
         int N = sin.nextInt(); 
