@@ -1,32 +1,38 @@
 package day9;
+
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+
+
 
 public class Solution {
-    public int[] multiply(int[] A) {
-    	if(A.length==0) return A;
-    	Collection arr = new ArrayList();
-        int e=A[A.length-2]*A[A.length-1];
-        for(int i= 0 ; i<A.length;i++){
-        	
-        	arr.add(e);
-        	e=e*A[A.length-1];
-        }
-         
-      
-            
-        int [] B=new int[arr.size()];
-        for(int i = 0;i<arr.size();i++){  
-            B[i] = (int) ((ArrayList) arr).get(i);  
-        }
-        return B;
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+    	
+    	
+    	
+    	ArrayList<Integer> list = new ArrayList();
+ 
+        if(k>input.length) return  list;
+        
+        	int i;
+        	for(i  = 0 ;i<k;i++){   
+        		for(int j  = i+1 ;j<input.length;j++){  
+        			if(input[j]<input[i]){
+        				int temp = input[i];
+        				input[i] =  input [j];
+        				input[j] = temp;
+        			}
+        		}list.add(input[i]);
+        	}
+        
+
+		return  list;
+        
     }
     public static void main(String[] args){
+    	
     	Solution s = new Solution();
-    	int[] A = {2,3,4,5,6,7};
-    	int[] B = s.multiply(A);
-    	System.out.println(B.toString());
+    	int[] input = {1,2,3,5,3,9};
+    	int k = 9;
+    	System.out.println(s.GetLeastNumbers_Solution(input, k));
     }
-  
 }
