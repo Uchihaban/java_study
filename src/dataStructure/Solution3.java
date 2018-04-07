@@ -1,4 +1,4 @@
-package day7;
+package dataStructure;
 
 import java.util.Arrays;
 /*题目：数组中重复的数字
@@ -6,7 +6,7 @@ import java.util.Arrays;
 也不知道每个数字重复几次。请找出数组中任意一个重复的数字。例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，
 那么对应的输出是第一个重复的数字2。*/
 
-public class Solution {
+public class Solution3 {
     // Parameters:
     //    numbers:     an array of integers
     //    length:      the length of array numbers
@@ -56,7 +56,7 @@ public class Solution {
 	    }
 	
 	public static void main(String[] args){
-		Solution s = new Solution();
+		Solution3 s = new Solution3();
 		int[] numbers={2,3,2,1,1};
 		int [] duplication=new int[1];
 		int len=numbers.length;

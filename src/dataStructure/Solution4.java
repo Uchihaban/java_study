@@ -1,4 +1,4 @@
-package day6;
+package dataStructure;
 
 /*题目：旋转数组的最小数字
  把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
@@ -6,7 +6,7 @@ package day6;
 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。 
 NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。*/
 
-public class Solution {
+public class Solution4 {
     public int minNumberInRotateArray(int [] array) {
         int[] brr = new int[array.length];
         int index = 0;
@@ -27,7 +27,7 @@ public class Solution {
         
     }
     public static void main(String[] args){
-    	Solution s = new Solution();
+    	Solution4 s = new Solution4();
         int[] arr = {3,4,5,1,2};
     	s.minNumberInRotateArray(arr);
     }

@@ -1,4 +1,4 @@
-package day8;
+package dataStructure;
 
 public class FindKth {
 	public int findKth(int[] a, int n, int K) {

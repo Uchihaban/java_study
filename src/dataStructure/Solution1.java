@@ -1,15 +1,15 @@
-package day9;
+package dataStructure;
 
 import java.util.ArrayList;
 
 
-
-public class Solution {
+//输出前k个最小的
+public class Solution1 {
     public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
     	
     	
     	
-    	ArrayList<Integer> list = new ArrayList();
+    	ArrayList<Integer> list = new ArrayList<Integer>();
  
         if(k>input.length) return  list;
         
@@ -30,9 +30,9 @@ public class Solution {
     }
     public static void main(String[] args){
     	
-    	Solution s = new Solution();
+    	Solution1 s = new Solution1();
     	int[] input = {1,2,3,5,3,9};
-    	int k = 9;
+    	int k = 3;
     	System.out.println(s.GetLeastNumbers_Solution(input, k));
     }
 }
