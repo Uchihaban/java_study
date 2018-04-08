@@ -1,6 +1,7 @@
 package dataStructure;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 //输出前k个最小的
@@ -31,8 +32,22 @@ public class Solution1 {
     public static void main(String[] args){
     	
     	Solution1 s = new Solution1();
-    	int[] input = {1,2,3,5,3,9};
-    	int k = 3;
-    	System.out.println(s.GetLeastNumbers_Solution(input, k));
+    	@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+    	while(scanner.hasNext()){
+    		
+    		int N = scanner.nextInt();
+    		int[] input = new int[N];
+    		for(int j = 0;j<N;j++){
+                input[j]=scanner.nextInt();
+            }
+    	    int K = scanner.nextInt();
+    	    
+    	    System.out.println(s.GetLeastNumbers_Solution(input, K));
+    	}
+    	
+    	
+    	
+    	
     }
 }
